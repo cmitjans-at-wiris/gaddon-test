@@ -7,7 +7,7 @@ const onOpen = () => {
 };
 
 const openTaskpane = () => {
-  const htmlServer = HtmlService.createTemplateFromFile('index.html');
+  const htmlServer = HtmlService.createTemplateFromFile('taskpane-html.html');
   const html = htmlServer.evaluate();
 
   const ui = DocumentApp.getUi();

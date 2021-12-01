@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "Add-on",
+			"path": "."
+		},
+		{
+      "name": "Taskpane",
+      "path": "taskpane"
+    },
+	],
+	"settings": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true
+		},
+		"files.insertFinalNewline": true,
+		"eslint.packageManager": "yarn",
+		"eslint.workingDirectories": [
+			".",
+			"taskpane"
+		],
+	}
+}

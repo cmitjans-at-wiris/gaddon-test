@@ -19,6 +19,7 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.25.3",
     "gas-webpack-plugin": "^2.1.0",
+    "html-inline-script-webpack-plugin": "^2.0.3",
     "html-webpack-plugin": "^5.5.0",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.4.0",

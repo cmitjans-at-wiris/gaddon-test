@@ -1,4 +1,5 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import HtmlInlineWebpackPlugin from 'html-inline-script-webpack-plugin';
 import { Configuration } from 'webpack';
 
 const configuration: Configuration = {
@@ -10,9 +11,10 @@ const configuration: Configuration = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'taskpane-html.html',
+      filename: 'taskpane.html',
       template: './taskpane/assets/html/index.html',
     }),
+    new HtmlInlineWebpackPlugin(),
   ],
 };
 

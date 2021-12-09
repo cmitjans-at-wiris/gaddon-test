@@ -1,4 +1,5 @@
 import { Configuration } from 'webpack';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import GasPlugin from 'gas-webpack-plugin';
 
 const configuration: Configuration = {
@@ -22,6 +23,11 @@ const configuration: Configuration = {
   },
   plugins: [
     new GasPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: 'appsscript.json',
+      }],
+    }),
   ],
   stats: {
     children: true,

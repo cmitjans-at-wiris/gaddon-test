@@ -18,6 +18,7 @@ const configuration: Configuration = {
   resolve: {
     alias: {
       '@src': `${__dirname}/src`,
+      '@services': `${__dirname}/src/services`,
     },
     extensions: ['.ts'],
   },

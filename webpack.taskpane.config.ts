@@ -8,10 +8,16 @@ const configuration: Configuration = {
     taskpane: './taskpane/src/main.ts',
   },
   resolve: {
-    extensions: ['.ts'],
+    extensions: ['.ts', '.js'],
   },
   module: {
     rules: [
+      {
+        test: /\.m?js/,
+        resolve: {
+          fullySpecified: false,
+        },
+      },
       {
         test: /\.vue$/,
         loader: 'vue-loader',

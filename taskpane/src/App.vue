@@ -6,14 +6,16 @@
 </template>
 
 <script lang='ts'>
-/* global google */
+import { GASClient } from 'gas-client';
+
 export default {
   setup() {
+    const { serverFunctions } = new GASClient();
+
     const onClick = () => {
-      google.script.run
-        .withSuccessHandler((a: any) => console.log(a))
-        .withFailureHandler((error: any) => console.error(`Error: ${error}`))
-        .insertImage();
+      serverFunctions.insertImage()
+        .then(() => console.log('Success!'))
+        .catch((error: any) => console.error(`Error: ${error}`));
     };
 
     return {
